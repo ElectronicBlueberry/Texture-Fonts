@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://examples/emoji/emoji_font.tres" type="BitmapFont" id=1]
+
+[node name="Emoji" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1048.0
+margin_bottom = 628.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+custom_fonts/font = ExtResource( 1 )
+text = "☼● This are emojis ◌
+
+Well, only sort of. Godot 3 can only display unicode smybols up to \\U+FFFF; ☺
+
+But, we can replace any other unicode smybol, to \"fake\" emojis ○
+
+This font uses a simple ArialLatin BitMap Font as a fallback, and overrides
+seldomly used characters with \"emojis\" from the Twemoji Project ☼☼☼
+
+If you ♥ emojis, you'll ☻ this feature"
+__meta__ = {
+"_edit_use_anchors_": false
+}

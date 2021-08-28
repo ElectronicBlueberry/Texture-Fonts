@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://examples/colorful_font/ColorfulBlockFont.png" type="Texture" id=1]
+[ext_resource path="res://examples/colorful_font/colorful_font.tres" type="BitmapFont" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.647059, 0.709804, 0.862745, 1 )
+
+[node name="ColorfulFont" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Example" type="Control" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 1040.0
+margin_bottom = 620.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Example"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Example/VBoxContainer"]
+margin_right = 1032.0
+margin_bottom = 377.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+custom_constants/separation = 8
+
+[node name="ColorRect" type="ColorRect" parent="Example/VBoxContainer/HBoxContainer"]
+margin_right = 341.0
+margin_bottom = 377.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Example/VBoxContainer/HBoxContainer/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 1 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Example/VBoxContainer/HBoxContainer"]
+margin_left = 349.0
+margin_right = 1032.0
+margin_bottom = 377.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Example/VBoxContainer/HBoxContainer/ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+custom_fonts/font = ExtResource( 2 )
+text = "This Colorful Font is more Fully-Featured,
+than the simple Number Example.
+It has 79 different Hand-drawn chars,
+and shows off many Features of the
+Font-Editor!
+
+(like kerning, and char-settings)
+
+#font #custom_font"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="Example/VBoxContainer"]
+margin_top = 385.0
+margin_right = 1032.0
+margin_bottom = 612.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Type something... "
+__meta__ = {
+"_edit_use_anchors_": false
+}

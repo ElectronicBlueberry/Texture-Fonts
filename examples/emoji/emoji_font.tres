@@ -1,0 +1,112 @@
+[gd_resource type="BitmapFont" load_steps=20 format=2]
+
+[ext_resource path="res://addons/texture_fonts/Classes/TextureFont.gd" type="Script" id=1]
+[ext_resource path="res://addons/texture_fonts/Classes/TextureFontSettings.gd" type="Script" id=2]
+[ext_resource path="res://examples/emoji/emojis/1f60d.svg" type="Texture" id=3]
+[ext_resource path="res://addons/texture_fonts/Classes/TextureFontMapping.gd" type="Script" id=4]
+[ext_resource path="res://examples/emoji/ArialLatin.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://examples/emoji/emojis/1f92f.svg" type="Texture" id=6]
+[ext_resource path="res://examples/emoji/emojis/1f448.svg" type="Texture" id=7]
+[ext_resource path="res://examples/emoji/emojis/1f62e.svg" type="Texture" id=8]
+[ext_resource path="res://examples/emoji/emojis/2764.svg" type="Texture" id=9]
+[ext_resource path="res://examples/emoji/emojis/1f525.svg" type="Texture" id=10]
+[ext_resource path="res://examples/emoji/emojis/1f622.svg" type="Texture" id=11]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+char_settings = {
+}
+kerning_pairs = [  ]
+gap = 2
+horizontal_align = 1
+vertical_align = 0
+monospace = false
+preview_color = Color( 0.12549, 0.141176, 0.192157, 1 )
+preview_chars = ""
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+source_texture = ExtResource( 3 )
+scaled_texture = ExtResource( 3 )
+rect_size = Vector2( 36, 36 )
+rect_gap = Vector2( 0, 0 )
+texture_offset = Vector2( 0, 0 )
+scale = 1
+interpolation = 0
+chars = "\\U+263b;"
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 4 )
+source_texture = ExtResource( 8 )
+scaled_texture = ExtResource( 8 )
+rect_size = Vector2( 36, 36 )
+rect_gap = Vector2( 0, 0 )
+texture_offset = Vector2( 0, 0 )
+scale = 1
+interpolation = 0
+chars = "\\U+25cb;"
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 4 )
+source_texture = ExtResource( 6 )
+scaled_texture = ExtResource( 6 )
+rect_size = Vector2( 36, 36 )
+rect_gap = Vector2( 0, 0 )
+texture_offset = Vector2( 0, 0 )
+scale = 1
+interpolation = 0
+chars = "\\U+25cc;"
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 4 )
+source_texture = ExtResource( 7 )
+scaled_texture = ExtResource( 7 )
+rect_size = Vector2( 36, 36 )
+rect_gap = Vector2( 0, 0 )
+texture_offset = Vector2( 0, 0 )
+scale = 1
+interpolation = 0
+chars = "\\U+25cf;"
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 4 )
+source_texture = ExtResource( 10 )
+scaled_texture = ExtResource( 10 )
+rect_size = Vector2( 36, 36 )
+rect_gap = Vector2( 0, 0 )
+texture_offset = Vector2( 0, 0 )
+scale = 1
+interpolation = 0
+chars = "\\U+263c;"
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 4 )
+source_texture = ExtResource( 9 )
+scaled_texture = ExtResource( 9 )
+rect_size = Vector2( 36, 36 )
+rect_gap = Vector2( 0, 0 )
+texture_offset = Vector2( 0, 0 )
+scale = 1
+interpolation = 0
+chars = "\\U+2665;"
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 4 )
+source_texture = ExtResource( 11 )
+scaled_texture = ExtResource( 11 )
+rect_size = Vector2( 36, 36 )
+rect_gap = Vector2( 0, 0 )
+texture_offset = Vector2( 0, 0 )
+scale = 1
+interpolation = 0
+chars = "\\U+263a;"
+
+[resource]
+textures = [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 11 ) ]
+chars = PoolIntArray( 9786, 6, 0, 0, 36, 36, 1, 0, 38, 9675, 1, 0, 0, 36, 36, 1, 0, 38, 9787, 0, 0, 0, 36, 36, 1, 0, 38, 9788, 4, 1, 0, 34, 36, 1, 0, 36, 9676, 2, 1, 0, 34, 36, 1, 0, 36, 9829, 5, 0, 0, 36, 36, 1, 0, 38, 9679, 3, 0, 0, 36, 36, 1, 0, 38 )
+height = 36.0
+ascent = 4.0
+fallback = ExtResource( 5 )
+script = ExtResource( 1 )
+texture_mappings = [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ]
+font_settings = SubResource( 1 )
