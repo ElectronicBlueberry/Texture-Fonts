@@ -12,3 +12,5 @@ Create hand-drawn or pixel art Fonts directly inside of Godot, or add custom emo
 Download the addon, enable it, and create a new Resource with the type "TextureFont". Add a Texture to get started.
 
 Check out the examples included in this repository to see what's possible when creating your own Fonts.
+
+For guides and a complete documentation, see the [Wiki](https://github.com/ElectronicBlueberry/Texture-Fonts/wiki)
