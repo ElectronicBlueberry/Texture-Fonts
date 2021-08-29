@@ -30,9 +30,9 @@ text = "☼● This are emojis ◌
 
 Well, only sort of. Godot 3 can only display unicode smybols up to \\U+FFFF; ☺
 
-But, we can replace any other unicode smybol, to \"fake\" emojis ○
+But we can replace any other unicode symbol, to \"fake\" emojis ○
 
-This font uses a simple ArialLatin BitMap Font as a fallback, and overrides
+This font uses a simple ArialLatin BitMap Font as a fallback and overrides
 seldomly used characters with \"emojis\" from the Twemoji Project ☼☼☼
 
 If you ♥ emojis, you'll ☻ this feature"
