@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://addons/texture_fonts/UI/Components/Vector2Edit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/texture_fonts/Assets/ExternalLink.svg" type="Texture" id=2]
 [ext_resource path="res://addons/texture_fonts/UI/FontSettings.gd" type="Script" id=3]
 [ext_resource path="res://addons/texture_fonts/UI/Components/TextureViewer/TextureViewer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/texture_fonts/Assets/Fonts/RobotoMono/RobotoMono-Medium.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://addons/texture_fonts/UI/FontEditor.gd" type="Script" id=6]
 [ext_resource path="res://addons/texture_fonts/UI/FileSettings.gd" type="Script" id=7]
 [ext_resource path="res://addons/texture_fonts/UI/Preview.gd" type="Script" id=8]
+[ext_resource path="res://addons/texture_fonts/UI/HelpButton.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 5 )
@@ -600,6 +602,36 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/focus = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1048.0
+margin_bottom = 628.0
+
+[node name="HelpButton" type="Button" parent="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -63.0
+margin_bottom = 20.0
+text = "Help"
+align = 0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control/HelpButton"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -16.0
+margin_right = -4.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource( 2 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="TabContainer/Textures/Files/HeadingBox/AddTextureButton" to="." method="_on_AddTextureButton_pressed"]
 [connection signal="file_selected" from="TabContainer/Textures/Files/HeadingBox/AddTextureButton/FileDialog" to="." method="_on_FileDialog_file_selected"]
