@@ -121,6 +121,7 @@ func add_texture(texture: Texture, idx := -1):
 	_add_texture_ui(texture, idx)
 	var font = get_font_from_ref()
 	font.add_texture(texture)
+	change_texture(file_list.get_child_count() - 1)
 	queue_save()
 
 func _add_texture_ui(texture: Texture, idx := -1):
@@ -170,7 +171,6 @@ func change_texture(index: int):
 	texture_viewer.set_mapping(font.texture_mappings[index])
 	
 	update_overlay()
-	queue_save()
 
 
 # ------ Signals ------
