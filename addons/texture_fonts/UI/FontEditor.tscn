@@ -606,6 +606,7 @@ custom_styles/normal = SubResource( 3 )
 [node name="Control" type="Control" parent="."]
 margin_right = 1048.0
 margin_bottom = 628.0
+mouse_filter = 2
 
 [node name="HelpButton" type="Button" parent="Control"]
 anchor_left = 1.0
