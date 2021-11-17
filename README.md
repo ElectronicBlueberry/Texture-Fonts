@@ -1,6 +1,6 @@
 # Texture-Fonts
 
-Texture Fonts is a Plugin for Godot 3.3.3+ that allows for easy creation of custom Fonts directly inside of Godot.
+Texture Fonts is a Plugin for Godot 3.4+ that allows for easy creation of custom Fonts directly inside of Godot.
 Simply load a texture, specify some parameters, and the plugin will generate all necessary font-data.
 
 The Plugin adds a new custom Resource "TextureFont", and a Font Editor to edit the Fonts.
