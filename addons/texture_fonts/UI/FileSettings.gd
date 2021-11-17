@@ -32,8 +32,16 @@ func _ready():
 	interpolation.add_item("Trilinear")
 
 
-func set_mapping(mapping):	
+func set_mapping(mapping):
 	current_mapping = mapping
+	
+	var texture: Texture = mapping.source_texture
+	var max_size := texture.get_size()
+	
+	size.max_value = max_size
+	gap.max_value = max_size
+	offset.max_value = max_size
+	
 	size.value = mapping.rect_size
 	gap.value = mapping.rect_gap
 	offset.value = mapping.texture_offset

@@ -149,7 +149,9 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 183.0
 margin_bottom = 42.0
-value = Vector2( 0, 0 )
+min_value = Vector2( 1, 1 )
+max_value = Vector2( 100, 100 )
+value = Vector2( 1, 1 )
 label = "Rect Size"
 
 [node name="Gap" parent="TabContainer/Textures/FileSettings/VBoxContainer/RectSettings" instance=ExtResource( 1 )]
@@ -158,6 +160,8 @@ anchor_bottom = 0.0
 margin_left = 195.0
 margin_right = 378.0
 margin_bottom = 42.0
+min_value = Vector2( 0, 0 )
+max_value = Vector2( 100, 100 )
 value = Vector2( 0, 0 )
 label = "Rect Gap"
 
@@ -167,6 +171,8 @@ anchor_bottom = 0.0
 margin_left = 390.0
 margin_right = 573.0
 margin_bottom = 42.0
+min_value = Vector2( 0, 0 )
+max_value = Vector2( 100, 100 )
 value = Vector2( 0, 0 )
 label = "Texture Offset"
 
@@ -283,18 +289,18 @@ margin_bottom = -4.0
 script = ExtResource( 3 )
 
 [node name="HSplitContainer" type="HSplitContainer" parent="TabContainer/Font Settings"]
-margin_right = 671.0
-margin_bottom = 564.0
+margin_right = 687.0
+margin_bottom = 592.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
 [node name="Settings" type="VBoxContainer" parent="TabContainer/Font Settings/HSplitContainer"]
-margin_right = 217.0
-margin_bottom = 564.0
+margin_right = 223.0
+margin_bottom = 592.0
 size_flags_horizontal = 3
 
 [node name="HeadingBox" type="HBoxContainer" parent="TabContainer/Font Settings/HSplitContainer/Settings"]
-margin_right = 217.0
+margin_right = 223.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 
@@ -305,14 +311,14 @@ text = "Font Settings"
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/Font Settings/HSplitContainer/Settings/HeadingBox"]
 margin_left = 87.0
-margin_right = 217.0
+margin_right = 223.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Font Settings/HSplitContainer/Settings"]
 margin_top = 18.0
-margin_right = 217.0
-margin_bottom = 564.0
+margin_right = 223.0
+margin_bottom = 592.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 4
@@ -323,8 +329,8 @@ custom_constants/margin_bottom = 4
 [node name="Grid" type="GridContainer" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer"]
 margin_left = 4.0
 margin_top = 4.0
-margin_right = 213.0
-margin_bottom = 542.0
+margin_right = 219.0
+margin_bottom = 570.0
 columns = 2
 
 [node name="Label" type="Label" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
@@ -336,10 +342,11 @@ text = "Height:"
 
 [node name="Height" type="SpinBox" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_left = 110.0
-margin_right = 209.0
+margin_right = 215.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 min_value = 1.0
+max_value = 4096.0
 value = 1.0
 
 [node name="Label2" type="Label" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
@@ -352,10 +359,11 @@ text = "Gap:"
 [node name="Gap" type="SpinBox" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_left = 110.0
 margin_top = 28.0
-margin_right = 209.0
+margin_right = 215.0
 margin_bottom = 52.0
 size_flags_horizontal = 3
-min_value = -100.0
+min_value = -4096.0
+max_value = 4096.0
 
 [node name="Label3" type="Label" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_top = 61.0
@@ -367,10 +375,11 @@ text = "Horizontal Align:"
 [node name="HorizontalAlign" type="SpinBox" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_left = 110.0
 margin_top = 56.0
-margin_right = 209.0
+margin_right = 215.0
 margin_bottom = 80.0
 size_flags_horizontal = 3
-min_value = -100.0
+min_value = -4096.0
+max_value = 4096.0
 
 [node name="Label6" type="Label" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_top = 89.0
@@ -382,10 +391,11 @@ text = "Vertical Align:"
 [node name="VerticalAlign" type="SpinBox" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_left = 110.0
 margin_top = 84.0
-margin_right = 209.0
+margin_right = 215.0
 margin_bottom = 108.0
 size_flags_horizontal = 3
-min_value = -100.0
+min_value = -4096.0
+max_value = 4096.0
 
 [node name="Label4" type="Label" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_top = 117.0
@@ -397,9 +407,10 @@ text = "Ascent:"
 [node name="Ascent" type="SpinBox" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_left = 110.0
 margin_top = 112.0
-margin_right = 209.0
+margin_right = 215.0
 margin_bottom = 136.0
 size_flags_horizontal = 3
+max_value = 4096.0
 
 [node name="Label5" type="Label" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_top = 145.0
@@ -410,30 +421,30 @@ text = "Monospaced:"
 [node name="MonoSpaced" type="CheckBox" parent="TabContainer/Font Settings/HSplitContainer/Settings/MarginContainer/Grid"]
 margin_left = 110.0
 margin_top = 140.0
-margin_right = 209.0
+margin_right = 215.0
 margin_bottom = 164.0
 
 [node name="ListSettings" type="VBoxContainer" parent="TabContainer/Font Settings/HSplitContainer"]
-margin_left = 229.0
-margin_right = 671.0
-margin_bottom = 564.0
+margin_left = 235.0
+margin_right = 687.0
+margin_bottom = 592.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
 [node name="VSplitContainer" type="VSplitContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings"]
-margin_right = 442.0
-margin_bottom = 564.0
+margin_right = 452.0
+margin_bottom = 592.0
 size_flags_vertical = 3
 
 [node name="Kerning" type="VBoxContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer"]
-margin_right = 442.0
-margin_bottom = 219.0
+margin_right = 452.0
+margin_bottom = 230.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
 [node name="HeadingBox" type="HBoxContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/Kerning"]
-margin_right = 442.0
+margin_right = 452.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 
@@ -448,13 +459,13 @@ __meta__ = {
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/Kerning/HeadingBox"]
 margin_left = 87.0
-margin_right = 401.0
+margin_right = 411.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 
 [node name="AddKerningButton" type="Button" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/Kerning/HeadingBox"]
-margin_left = 405.0
-margin_right = 442.0
+margin_left = 415.0
+margin_right = 452.0
 margin_bottom = 20.0
 text = "Add"
 __meta__ = {
@@ -463,8 +474,8 @@ __meta__ = {
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/Kerning"]
 margin_top = 24.0
-margin_right = 442.0
-margin_bottom = 219.0
+margin_right = 452.0
+margin_bottom = 230.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 4
@@ -475,24 +486,24 @@ custom_constants/margin_bottom = 4
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/Kerning/MarginContainer"]
 margin_left = 4.0
 margin_top = 4.0
-margin_right = 438.0
-margin_bottom = 191.0
+margin_right = 448.0
+margin_bottom = 202.0
 
 [node name="KerningList" type="VBoxContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/Kerning/MarginContainer/ScrollContainer"]
-margin_right = 434.0
-margin_bottom = 187.0
+margin_right = 444.0
+margin_bottom = 198.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="CharSettings" type="VBoxContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer"]
-margin_top = 231.0
-margin_right = 442.0
-margin_bottom = 564.0
+margin_top = 242.0
+margin_right = 452.0
+margin_bottom = 592.0
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
 
 [node name="HeadingBox" type="HBoxContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/CharSettings"]
-margin_right = 442.0
+margin_right = 452.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 
@@ -507,13 +518,13 @@ __meta__ = {
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/CharSettings/HeadingBox"]
 margin_left = 80.0
-margin_right = 401.0
+margin_right = 411.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 
 [node name="AddCharSettingButton" type="Button" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/CharSettings/HeadingBox"]
-margin_left = 405.0
-margin_right = 442.0
+margin_left = 415.0
+margin_right = 452.0
 margin_bottom = 20.0
 text = "Add"
 __meta__ = {
@@ -522,8 +533,8 @@ __meta__ = {
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/CharSettings"]
 margin_top = 24.0
-margin_right = 442.0
-margin_bottom = 333.0
+margin_right = 452.0
+margin_bottom = 350.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 4
@@ -534,27 +545,27 @@ custom_constants/margin_bottom = 4
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/CharSettings/MarginContainer"]
 margin_left = 4.0
 margin_top = 4.0
-margin_right = 438.0
-margin_bottom = 305.0
+margin_right = 448.0
+margin_bottom = 322.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 
 [node name="SettingList" type="VBoxContainer" parent="TabContainer/Font Settings/HSplitContainer/ListSettings/VSplitContainer/CharSettings/MarginContainer/ScrollContainer"]
-margin_right = 434.0
-margin_bottom = 301.0
+margin_right = 444.0
+margin_bottom = 318.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Preview" type="VBoxContainer" parent="TabContainer/Font Settings"]
-margin_left = 683.0
-margin_right = 1016.0
-margin_bottom = 564.0
+margin_left = 699.0
+margin_right = 1040.0
+margin_bottom = 592.0
 size_flags_horizontal = 3
 script = ExtResource( 8 )
 
 [node name="HeadingBox" type="HBoxContainer" parent="TabContainer/Font Settings/Preview"]
-margin_right = 333.0
+margin_right = 341.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 
@@ -566,13 +577,13 @@ text = "Preview"
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/Font Settings/Preview/HeadingBox"]
 margin_left = 54.0
-margin_right = 187.0
+margin_right = 195.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 
 [node name="Scale" type="SpinBox" parent="TabContainer/Font Settings/Preview/HeadingBox"]
-margin_left = 191.0
-margin_right = 265.0
+margin_left = 199.0
+margin_right = 273.0
 margin_bottom = 24.0
 min_value = 100.0
 max_value = 1000.0
@@ -582,21 +593,21 @@ exp_edit = true
 suffix = "%"
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="TabContainer/Font Settings/Preview/HeadingBox"]
-margin_left = 269.0
-margin_right = 333.0
+margin_left = 277.0
+margin_right = 341.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 64, 0 )
 color = Color( 0.12549, 0.141176, 0.192157, 1 )
 
 [node name="MarginContainer" type="ScrollContainer" parent="TabContainer/Font Settings/Preview"]
 margin_top = 28.0
-margin_right = 333.0
-margin_bottom = 564.0
+margin_right = 341.0
+margin_bottom = 592.0
 size_flags_vertical = 3
 
 [node name="TextEdit" type="TextEdit" parent="TabContainer/Font Settings/Preview/MarginContainer"]
-margin_right = 333.0
-margin_bottom = 536.0
+margin_right = 341.0
+margin_bottom = 564.0
 rect_clip_content = true
 size_flags_horizontal = 3
 size_flags_vertical = 3
